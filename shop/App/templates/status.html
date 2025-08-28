@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Order Status{% endblock %}
+
+{% block content %}
+<div class="status-box">
+  <h2>Order Status</h2>
+  <p><strong>Item:</strong> {{ order.item.name }}</p>
+  <p><strong>Amount:</strong> {{ order.amount }} TZS</p>
+  <p class="status {{ order.status }}">Status: {{ order.status|title }}</p>
+  <a href="/" class="btn">⬅ Back to Shop</a>
+</div>
+{% endblock %}
